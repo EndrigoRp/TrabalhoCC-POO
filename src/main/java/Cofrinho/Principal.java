@@ -20,6 +20,7 @@ public class Principal {
 
             switch (opcao){
                 case 1:
+                    // Usuario inseri valor e tipo moeda.
                     System.out.println("\nEscolha o tipo de moeda:");
                     System.out.println("1. Dólar");
                     System.out.println("2. Euro");
@@ -39,6 +40,7 @@ public class Principal {
                     break;
 
                 case 2:
+                    //Remover moeda, solicita valor e tipo, apenas remove se encontrada.
                     System.out.println("Removendo uma moeda.");
                     System.out.print("Digite o valor da moeda a remover: ");
                     valor = scanner.nextDouble();
@@ -65,6 +67,7 @@ public class Principal {
                     break;
 
                 case 3:
+                    //Chama metodo listagemMoedas() e lista todas as moedas.
                     if (cofrinho.isEmpty()) {
                         System.out.println("\nO cofrinho está vazio. Nenhuma moeda para listar.");
                     } else {
@@ -76,6 +79,7 @@ public class Principal {
                     break;
 
                 case 4:
+                    //Informa e converte para reais total de moedas
                     System.out.println("*".repeat(50));
                     System.out.println("Total convertido para Real: R$" + cofrinho.totalConvertido());
                     System.out.println("*".repeat(50));
@@ -83,11 +87,13 @@ public class Principal {
 
 
                 case 5:
+                    //Sair do programa e fecha scanner
                     System.out.println("\nSaindo do programa...");
                     scanner.close();
                     return;
 
                 default:
+                    //Opçao invalida
                     System.out.println("Opçao invalida! Tente novamente");
 
             }
